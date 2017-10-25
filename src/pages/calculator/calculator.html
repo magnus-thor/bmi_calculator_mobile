@@ -17,7 +17,7 @@
   <ion-list>
     <ion-item>
       <ion-label floating>Weight (kg)</ion-label>
-      <ion-linput type="number" [(ngModel)]="weight"></ion-linput>
+      <ion-input type="number" [(ngModel)]="weight"></ion-input>
     </ion-item>
 
     <ion-item>
@@ -28,6 +28,17 @@
   </ion-list>
 
   <div padding>
-    <button block ion-button (click)="calculateBMI()">Calculate</button>
+    <button block ion-button color="danger" clear (click)="calculateBMI()">Calculate</button>
   </div>
+
+  <ion-card *ngIf="bmiValue">
+    <ion-card-header>
+      BMI Calculation
+    </ion-card-header>
+    <ion-card-content>
+      <p>Person: Weight {{weight}} kg, Height {{this.height}} cm.</p>
+      <p>BMI: {{this.bmiValue}}</p>
+      <p><strong>You are {{bmiMessage}}</strong></p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
