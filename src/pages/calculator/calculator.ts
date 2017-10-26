@@ -47,22 +47,20 @@ export class CalculatorPage {
   }
 
   warningMessage() {
+    let alert;
     if (this.bmiMessage == 'Underweight') {
-      let alert = this.alertCtrl.create({
+      alert = this.alertCtrl.create({
         title: 'Underweight',
         subTitle: 'Go grab something to eat',
         buttons: ['OK']
-      });
-      alert.present();
-    }
+      })}
     if (this.bmiMessage == "Obese") {
-      let alert = this.alertCtrl.create({
+      alert = this.alertCtrl.create({
         title: 'Overweight',
         subTitle: 'Give your food to the underweight person',
         buttons: ['OK']
-      });
-      alert.present();
-    }
+      })}
+    alert.present();
   };
 
   toastMessage() {
