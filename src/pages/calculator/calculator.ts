@@ -8,7 +8,6 @@ import { ToastController } from 'ionic-angular';
 @Component({
   selector: 'page-calculator',
   templateUrl: 'calculator.html',
-  styleUrl: ['calculator.scss']
 })
 export class CalculatorPage {
   height: number;
