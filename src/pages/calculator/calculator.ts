@@ -59,7 +59,9 @@ export class CalculatorPage {
         subTitle: 'Give your food to the underweight person',
         buttons: ['OK']
       })}
-    alert.present();
+    if (alert != nil) {
+      alert.present();
+    };
   };
 
   toastMessage() {
