@@ -52,16 +52,17 @@ export class CalculatorPage {
         title: 'Underweight',
         subTitle: 'Go grab something to eat',
         buttons: ['OK']
-      })}
+      });
+      alert.present();
+    }
     if (this.bmiMessage == "Obese") {
       let alert = this.alertCtrl.create({
         title: 'Overweight',
         subTitle: 'Give your food to the underweight person',
         buttons: ['OK']
-      })}
-    if (alert != null) {
+      });
       alert.present();
-    };
+    }
   };
 
   toastMessage() {
