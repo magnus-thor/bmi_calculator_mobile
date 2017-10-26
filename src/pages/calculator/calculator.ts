@@ -59,7 +59,7 @@ export class CalculatorPage {
         subTitle: 'Give your food to the underweight person',
         buttons: ['OK']
       })}
-    if (alert != nil) {
+    if (alert != null) {
       alert.present();
     };
   };
